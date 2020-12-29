@@ -22,8 +22,12 @@ module.exports = {
       },
 
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        test: /\.scss$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader',
+        ],
       },
 
       {
@@ -69,8 +73,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: "styles/[name].css",
-      chunkFilename: "[id].css"
+      filename: 'app.css',
     }),
 
     new BrowserSyncPlugin({

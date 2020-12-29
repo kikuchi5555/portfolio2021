@@ -1,3 +1,3 @@
-import '../css/base.css';
+import '../css/base.scss';
 
 console.log('build!!!');
