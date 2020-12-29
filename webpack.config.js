@@ -5,8 +5,8 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
   entry: {
-    'index': './js/index.js',
-  },  
+    'app': './js/app.js',
+  },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -56,19 +56,10 @@ module.exports = {
     ],
   },
 
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 8000,
-    stats: 'errors-only'
-  },
-
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
       template: 'index.html',
       inject: true,
-      chunks: ['index'],
       hash: true,
     }),
 
@@ -81,6 +72,6 @@ module.exports = {
       port: 8888,
       server: { baseDir: 'dist' },
       browser: 'google chrome',
-  }),
+    }),
   ]
 };
