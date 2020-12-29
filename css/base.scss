@@ -1,8 +1,7 @@
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
+/*
+ * Foundation
+ * =========================== */
+@import "foundation/destyle.css";
 
 :root {
     font-size: 14px;
