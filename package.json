@@ -7,7 +7,7 @@
     "clean": "rm -rf dist",
     "dev": "webpack --mode=development",
     "prod": "webpack --mode=production",
-    "watch": "webpack-dev-server"
+    "watch": "webpack --mode=development --watch"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^3.4.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
@@ -33,7 +35,6 @@
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-cli": "^3.3.10"
   }
 }

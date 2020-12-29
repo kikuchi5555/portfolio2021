@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -71,5 +72,12 @@ module.exports = {
       filename: "styles/[name].css",
       chunkFilename: "[id].css"
     }),
+
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 8888,
+      server: { baseDir: 'dist' },
+      browser: 'google chrome',
+  }),
   ]
 };
