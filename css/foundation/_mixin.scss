@@ -1,0 +1,130 @@
+//
+// breakpoint
+// sm, md, lg, xl, default md
+//
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//
+// clearfix
+//
+@mixin cf() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+//
+// hover
+//
+@mixin hover() {
+  @include mq(pc) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+//
+// hover text-decoration
+//
+@mixin hoverDecoration() {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+//
+// hover transition Alpha
+//
+@mixin hoverAlpha($start: 1, $end: .8, $duration: 200ms) {
+  transition: $duration;
+  opacity: $start;
+
+  &:hover {
+    opacity: $end;
+  }
+
+  @include mq() {
+    transition: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+//
+// ボタン等で固いシャドウ=>ホバーで引っ込む
+//
+@mixin solid-shadow($shadow-color: color(gray, button-shadow)) {
+  box-shadow: 0 4px 0 0 $shadow-color;
+  transition: box-shadow $transition_time, transform $transition_time;
+
+  &:hover {
+    box-shadow: 0 0 0 0 $shadow-color;
+    transform: translateY(4px);
+  }
+}
+
+//
+// ボタン要素のリセット
+//
+@mixin buttonReset {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+// 下部ボーダーのアニメーション
+@mixin hoverUnderLine($color: color(white, primary), $height: 1px) {
+  &::before, &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $height;
+    pointer-events: none;
+    background: $color;
+  }
+
+  &::after {
+    transform: translateX(-100%);
+  }
+
+  &:hover::after{
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-delay: .1s;
+    transition-timing-function: cubic-bezier(0.5, 0.1, 0.1, 1);
+    transform:translateX(0);
+  }
+
+  &:hover::before{
+    transition-property: transform;
+    transition-duration: .2s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(0.5, 0.1, 0.1, 1);
+    transform:translateX(100%);
+  }
+}
+
+// aタグの:hover
+@mixin hoverText($target) {
+  #{$target} {
+    transition: opacity $transition_time;
+  }
+
+  &:hover #{$target} {
+    opacity: .7;
+  }
+}

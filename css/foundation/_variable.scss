@@ -1,0 +1,68 @@
+$imgDir: '/wp-content/themes/sangyoi-service/assets/img/';
+
+$font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+$font-family-lt: 'Lato', sans-serif;
+
+// base rem
+$rem: 16;
+
+// color
+$colors: (
+  white: (
+    primary: #FFFFFF
+  ),
+  black: (
+    primary: #333333,
+    text: #323B44,
+    text-light: #434E58,
+    footer-bg: #3F3F3F
+  ),
+  gray: (
+    primary: #637487,
+    dark: #434E5B,
+    light: #FAFAFA,
+    bg: #F6F8FA,
+    bg-light: #F7F7F7,
+    button-shadow: #999999,
+    placeholder: #C6CCD4,
+    border: #E0E4E8
+  ),
+  blue: (
+    primary: #1565C0,
+    secondary: #1E88E5,
+    light: #03A9F4,
+    bg: #EBF6FD,
+    slide-dot: #D8E1EA,
+    border: #D8E1EA,
+  ),
+  red: (
+    primary: #FE595E,
+    bg: #FEEEEF
+  ),
+  opacity: (
+    shadow: rgba(0,0,0,0.2)
+  ),
+  gradation: (
+    primary: linear-gradient(90deg, #F49219 0%, #FFB42D 100%),
+    secondary: linear-gradient(90deg, #1565C0 0%, #03A9F4 100%)
+  )
+);
+
+// animation
+$animation-move-point: 50px;
+
+// transition
+$transition_time: .3s;
+
+// breakpoint
+$breakpoints: (
+  'se': 'screen and (max-width: 374px)',
+  'sm': 'screen and (max-width: 399px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1239px)',
+  'max': 'screen and (min-width: 1366px)',
+  'pc': 'screen and (min-width: 768px)'
+) !default;
+
+$base-width: 1240px;

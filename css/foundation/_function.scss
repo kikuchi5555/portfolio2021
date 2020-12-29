@@ -1,0 +1,16 @@
+// color
+// color($color, $key);
+@function color($color, $key: primary) {
+  @return map-get(map-get($colors, $color), $key);
+}
+
+// get-rem(size);
+@function get-rem($size) {
+  @return $size / $rem * 1rem;
+}
+
+// get-vw(size);
+@function get-vw($size, $viewport: 320){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}

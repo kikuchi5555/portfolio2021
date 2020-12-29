@@ -1,0 +1,56 @@
+/**
+ * body and base
+ */
+ :root {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  --color-text: #333;
+  --color-bg: #fefefe;
+  --color-link: #999;
+  --color-link-hover: #fff;
+  --color-primary: #88e7c4;
+  --color-secondary: #c5517d;
+  --color-description: #3b343a;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: pragmatica-extended, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea {
+  margin: 0;
+  font-family: $font-family;
+}
+
+input::-ms-clear {
+  visibility: hidden;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop, body, button, input, select, textarea {
+    font-family: "メイリオ", Meiryo, sans-serif;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: color(black, text);
+}
+
+@include mq(pc) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
