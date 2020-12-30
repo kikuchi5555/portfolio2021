@@ -1,11 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   entry: {
-    'app': './src/js/app.js',
+    app: './src/js/app.js'
   },
 
   output: {
@@ -23,11 +23,7 @@ module.exports = {
 
       {
         test: /\.scss$/,
-        use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-            'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
 
       {
@@ -53,7 +49,7 @@ module.exports = {
           outputPath: 'fonts/'
         }
       }
-    ],
+    ]
   },
 
   plugins: [
@@ -61,18 +57,18 @@ module.exports = {
       template: 'src/index.html',
       favicon: './src/favicon.ico',
       inject: true,
-      hash: true,
+      hash: true
     }),
 
     new MiniCssExtractPlugin({
-      filename: 'app.css',
+      filename: 'app.css'
     }),
 
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 8888,
       server: { baseDir: 'dist' },
-      browser: 'google chrome',
-    }),
+      browser: 'google chrome'
+    })
   ]
 };
