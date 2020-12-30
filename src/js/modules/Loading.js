@@ -17,7 +17,7 @@ export default class Loading {
             this.count += 1;
         }.bind(this);
         img.src = this.images[i].src; // 画像にsrcを指定して読み込み開始
-    };
+    }
 
     // ローディング処理
     const nowLoading = setInterval(function() {
