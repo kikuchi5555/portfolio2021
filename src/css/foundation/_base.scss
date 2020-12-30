@@ -1,7 +1,7 @@
 /**
  * body and base
  */
- :root {
+:root {
   font-size: 14px;
 }
 
@@ -21,27 +21,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   margin: 0;
   font-family: $font-family;
-}
-
-input::-ms-clear {
-  visibility: hidden;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-@media all and (-ms-high-contrast: none) {
-  *::-ms-backdrop, body, button, input, select, textarea {
-    font-family: "メイリオ", Meiryo, sans-serif;
-  }
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
 }
 
 a {
@@ -50,7 +35,7 @@ a {
 }
 
 @include mq(pc) {
-  a[href^="tel:"] {
+  a[href^='tel:'] {
     pointer-events: none;
   }
 }
