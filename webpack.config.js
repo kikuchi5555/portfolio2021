@@ -5,7 +5,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
   entry: {
-    'app': './js/app.js',
+    'app': './src/js/app.js',
   },
 
   output: {
@@ -58,7 +58,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'src/index.html',
       inject: true,
       hash: true,
     }),
