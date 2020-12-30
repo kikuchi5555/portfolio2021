@@ -4,8 +4,8 @@ import Loading from './modules/Loading';
 
 class App {
   constructor() {
-      new Loading();
+    new Loading();
   }
 }
 
-document.addEventListener('DOMContentLoaded', new App);
+document.addEventListener('DOMContentLoaded', new App());

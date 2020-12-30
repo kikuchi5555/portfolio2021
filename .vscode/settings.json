@@ -1,0 +1,14 @@
+{
+  /* Linter and Formatter */
+  // linter
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // eslint
+  },
+  // formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトフォーマッターをPrettier
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  // Prettier対象外言語
+  "prettier.disableLanguages": ["markdown"]
+}
