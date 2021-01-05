@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "dev": "webpack --mode=development",
-    "prod": "webpack --mode=production",
-    "watch": "webpack --mode=development --watch",
+    "dev": "webpack --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js",
+    "watch": "webpack --config webpack.dev.js --watch",
     "lint": "eslint src"
   },
   "repository": {
