@@ -1,3 +1,6 @@
+## Site URL
+https://kikuchi5555.github.io/
+
 ## Installation
 Run this command in the terminal
 ```
