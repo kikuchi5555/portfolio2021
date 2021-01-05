@@ -10,7 +10,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts/[name].[contentHash].js'
+    filename: '[name].[contentHash].js'
   },
 
   module: {
@@ -61,7 +61,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: 'app.css'
+      filename: '[name].[contentHash].css'
     }),
 
     new BrowserSyncPlugin({
