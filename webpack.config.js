@@ -9,7 +9,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].[contentHash].js'
   },
 
@@ -67,7 +67,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 8888,
-      server: { baseDir: 'dist' },
+      server: { baseDir: 'docs' },
       browser: 'google chrome'
     })
   ]
