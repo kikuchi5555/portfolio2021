@@ -10,7 +10,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts/[name].js'
+    filename: 'scripts/[name].[contentHash].js'
   },
 
   module: {
@@ -35,7 +35,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: '[name].[contentHash].[ext]',
           outputPath: 'images/',
           esModule: false
         }
